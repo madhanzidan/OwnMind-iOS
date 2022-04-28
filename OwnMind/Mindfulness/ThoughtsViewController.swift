@@ -17,6 +17,8 @@ class ThoughtsViewController: UIViewController {
     var totalTime = 60
     var timePassed = 0
     
+    var player: AVAudioPlayer?
+    
     
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var stepLabel: UILabel!
@@ -33,9 +35,10 @@ class ThoughtsViewController: UIViewController {
     }
     
     @IBAction func finishPressed(_ sender: UIButton) {
-       // mindful.player?.stop()
+        player?.stop()
         let plusCount = Mindfulness(context: self.context)
         plusCount.sessionsDone += 1
+        stopSound(soundName: "ClaireDeLune")
         
         //Save the data
         do {
@@ -56,7 +59,12 @@ class ThoughtsViewController: UIViewController {
         }
     }
     
-    
+    func stopSound(soundName: String) {
+        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player?.stop()
+                
+    }
     
     
 }
