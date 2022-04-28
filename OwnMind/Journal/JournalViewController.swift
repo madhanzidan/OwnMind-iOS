@@ -61,6 +61,7 @@ extension JournalViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell", for: indexPath)
         //Get journal array
         cell.textLabel?.text = items![indexPath.row].date
+        cell.detailTextLabel?.text = items![indexPath.row].happened
         return cell
     }
     

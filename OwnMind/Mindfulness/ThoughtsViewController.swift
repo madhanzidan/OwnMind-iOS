@@ -10,6 +10,9 @@ import AVFoundation
 
 class ThoughtsViewController: UIViewController {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var count: Mindfulness?
+    
     var timer = Timer()
     var totalTime = 60
     var timePassed = 0
@@ -31,6 +34,16 @@ class ThoughtsViewController: UIViewController {
     
     @IBAction func finishPressed(_ sender: UIButton) {
        // mindful.player?.stop()
+        let plusCount = Mindfulness(context: self.context)
+        plusCount.sessionsDone += 1
+        
+        //Save the data
+        do {
+            try self.context.save()
+        } catch {
+            print(error)
+        }
+        
     }
     
     @objc func updateTimer() {

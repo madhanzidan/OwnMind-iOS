@@ -15,6 +15,8 @@ class MindfulnessViewController: UIViewController {
     @IBOutlet weak var sessionsCountLabel: UILabel!
     var player: AVAudioPlayer?
     
+    let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+   // var counts: Mindfulness?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,12 @@ class MindfulnessViewController: UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NotReallyBlack")!]
         navigationItem.standardAppearance = appearance
+        
+        //fetchMindfulnessCount()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //fetchMindfulnessCount()
     }
     
     @IBAction func startPressed(_ sender: UIButton) {
@@ -40,6 +48,20 @@ class MindfulnessViewController: UIViewController {
         player?.play()
                 
     }
+    
+//    func fetchMindfulnessCount() {
+//        do {
+//            let context = appDelegate.persistentContainer.viewContext
+//            let fetchRequest = Mindfulness.fetchRequest()
+//
+//            let data = try context.fetch(fetchRequest)
+//            counts = data
+//
+//        } catch {
+//            print(error)
+//        }
+//
+//    }
     
     //MARK: - View Modifier
     func setView(view: UIView){

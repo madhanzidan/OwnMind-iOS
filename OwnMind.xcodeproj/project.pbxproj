@@ -32,6 +32,8 @@
 		A8F0B684281702B500E7B85D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F0B682281702B500E7B85D /* Main.storyboard */; };
 		A8F0B686281702B700E7B85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F0B685281702B700E7B85D /* Assets.xcassets */; };
 		A8F0B689281702B700E7B85D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F0B687281702B700E7B85D /* LaunchScreen.storyboard */; };
+		A8F5634F281AC86D000EBD9F /* Mindfulness+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F5634D281AC86D000EBD9F /* Mindfulness+CoreDataClass.swift */; };
+		A8F56350281AC86D000EBD9F /* Mindfulness+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F5634E281AC86D000EBD9F /* Mindfulness+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		A8F0B685281702B700E7B85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8F0B688281702B700E7B85D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8F0B68A281702B700E7B85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F5634D281AC86D000EBD9F /* Mindfulness+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mindfulness+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A8F5634E281AC86D000EBD9F /* Mindfulness+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mindfulness+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 		A8F0B670281702B400E7B85D = {
 			isa = PBXGroup;
 			children = (
+				A8F5634D281AC86D000EBD9F /* Mindfulness+CoreDataClass.swift */,
+				A8F5634E281AC86D000EBD9F /* Mindfulness+CoreDataProperties.swift */,
 				A8949330281A373D000E8E8B /* Journal+CoreDataClass.swift */,
 				A8949331281A373D000E8E8B /* Journal+CoreDataProperties.swift */,
 				A8F0B67B281702B500E7B85D /* OwnMind */,
@@ -261,6 +267,7 @@
 			files = (
 				A81C56722819854E0030DCF8 /* OwnMind.xcdatamodeld in Sources */,
 				A81C566C28192AE80030DCF8 /* ThoughtsViewController.swift in Sources */,
+				A8F56350281AC86D000EBD9F /* Mindfulness+CoreDataProperties.swift in Sources */,
 				A8F0B681281702B500E7B85D /* HomeViewController.swift in Sources */,
 				A81C56A0281A2ED20030DCF8 /* DetailViewController.swift in Sources */,
 				A8F0B67D281702B500E7B85D /* AppDelegate.swift in Sources */,
@@ -272,6 +279,7 @@
 				A89576E22818D84400490424 /* MindfulnessViewController.swift in Sources */,
 				A89576E02818D82D00490424 /* JournalViewController.swift in Sources */,
 				A89576DC2818D5AD00490424 /* InputViewController.swift in Sources */,
+				A8F5634F281AC86D000EBD9F /* Mindfulness+CoreDataClass.swift in Sources */,
 				A81C566A281923FA0030DCF8 /* BreathViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
