@@ -9,11 +9,7 @@
         <attribute name="thoughts" optional="YES" attributeType="String"/>
         <attribute name="trigger" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Mindfulness" representedClassName="Mindfulness" syncable="YES">
-        <attribute name="sessionsDone" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-    </entity>
     <elements>
         <element name="Journal" positionX="-54" positionY="-9" width="128" height="134"/>
-        <element name="Mindfulness" positionX="-54" positionY="45" width="128" height="44"/>
     </elements>
 </model>
