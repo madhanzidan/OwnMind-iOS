@@ -6,17 +6,13 @@
 //
 
 import UIKit
-import AVFoundation
 
 class MindfulnessViewController: UIViewController {
-
     
     @IBOutlet weak var sessionsDoneView: UIView!
     @IBOutlet weak var sessionsCountLabel: UILabel!
-    var player: AVAudioPlayer?
     
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
-   // var counts: Mindfulness?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +24,6 @@ class MindfulnessViewController: UIViewController {
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NotReallyBlack")!]
         navigationItem.standardAppearance = appearance
         
-        //fetchMindfulnessCount()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        //fetchMindfulnessCount()
     }
     
     @IBAction func startPressed(_ sender: UIButton) {
@@ -40,28 +31,6 @@ class MindfulnessViewController: UIViewController {
         Singleton.sharedInstance.playSound()
     }
     
-    //MARK: - Play Sound Functio
-    
-//    func playSound(soundName: String) {
-//        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
-//        player = try! AVAudioPlayer(contentsOf: url!)
-//        player?.play()
-//
-//    }
-    
-//    func fetchMindfulnessCount() {
-//        do {
-//            let context = appDelegate.persistentContainer.viewContext
-//            let fetchRequest = Mindfulness.fetchRequest()
-//
-//            let data = try context.fetch(fetchRequest)
-//            counts = data
-//
-//        } catch {
-//            print(error)
-//        }
-//
-//    }
     
     //MARK: - View Modifier
     func setView(view: UIView){

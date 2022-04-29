@@ -9,7 +9,6 @@ import UIKit
 
 class BreathViewController: UIViewController {
     
-    
     @IBOutlet weak var stepLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     

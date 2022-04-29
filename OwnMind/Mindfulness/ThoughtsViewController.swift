@@ -6,19 +6,12 @@
 //
 
 import UIKit
-import AVFoundation
 
 class ThoughtsViewController: UIViewController {
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var count: Mindfulness?
     
     var timer = Timer()
     var totalTime = 60
     var timePassed = 0
-    
-    var player: AVAudioPlayer?
-    
     
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var stepLabel: UILabel!
@@ -35,16 +28,16 @@ class ThoughtsViewController: UIViewController {
     }
     
     @IBAction func finishPressed(_ sender: UIButton) {
-        player?.stop()
-        let plusCount = Mindfulness(context: self.context)
-        plusCount.sessionsDone += 1
+        
         Singleton.sharedInstance.stopSound()
         
-        //Save the data
-        do {
-            try self.context.save()
-        } catch {
-            print(error)
+        //Pop to root navigation controller
+        if self.presentingViewController != nil {
+            self.dismiss(animated: false, completion: {
+                self.navigationController!.popToRootViewController(animated: true)
+            })
+        } else {
+            self.navigationController!.popToRootViewController(animated: true)
         }
         
     }
@@ -58,13 +51,5 @@ class ThoughtsViewController: UIViewController {
             stepLabel.text = "You've completed your mindfulness session"
         }
     }
-    
-//    func stopSound(soundName: String) {
-//        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
-//        player = try! AVAudioPlayer(contentsOf: url!)
-//        player?.stop()
-//
-//    }
-    
     
 }

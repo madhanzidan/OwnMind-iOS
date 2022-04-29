@@ -6,10 +6,8 @@
 //
 
 import UIKit
-import AVFoundation
 
 class PositionViewController: UIViewController {
-    
     
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var stepLabel: UILabel!
