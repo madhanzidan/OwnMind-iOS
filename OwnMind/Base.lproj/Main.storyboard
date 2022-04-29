@@ -199,21 +199,21 @@
                                 <color key="sectionIndexColor" name="NotReallyBlack"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="JournalCell" textLabel="LgQ-Tl-TAp" detailTextLabel="PRg-gF-xRJ" style="IBUITableViewCellStyleSubtitle" id="vl3-xf-RD6">
-                                        <rect key="frame" x="20" y="31.666666030883789" width="350" height="63.666667938232422"/>
+                                        <rect key="frame" x="20" y="31.666666030883789" width="350" height="65.666664123535156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vl3-xf-RD6" id="GhH-kw-qon">
-                                            <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="63.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="65.666664123535156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LgQ-Tl-TAp">
-                                                    <rect key="frame" x="19.999999999999996" y="12.333333333333334" width="37.666666666666664" height="23.333333333333332"/>
+                                                    <rect key="frame" x="19.999999999999996" y="10.333333333333336" width="39.666666666666664" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
                                                     <color key="textColor" name="Salmon"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PRg-gF-xRJ">
-                                                    <rect key="frame" x="20" y="36.333333333333329" width="48" height="16.333333333333332"/>
+                                                    <rect key="frame" x="20" y="37" width="48" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
                                                     <color key="textColor" name="NotReallyBlack"/>

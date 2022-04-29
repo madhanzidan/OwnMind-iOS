@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8176355281B7694003A416A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8176354281B7694003A416A /* Singleton.swift */; };
 		A81C566A281923FA0030DCF8 /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81C5669281923FA0030DCF8 /* BreathViewController.swift */; };
 		A81C566C28192AE80030DCF8 /* ThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81C566B28192AE80030DCF8 /* ThoughtsViewController.swift */; };
 		A81C566E281936890030DCF8 /* ClaireDeLune.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A81C566D281936890030DCF8 /* ClaireDeLune.mp3 */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8176354281B7694003A416A /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		A81C5669281923FA0030DCF8 /* BreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
 		A81C566B28192AE80030DCF8 /* ThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsViewController.swift; sourceTree = "<group>"; };
 		A81C566D281936890030DCF8 /* ClaireDeLune.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ClaireDeLune.mp3; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				A89576E92818FD8600490424 /* PositionViewController.swift */,
 				A81C5669281923FA0030DCF8 /* BreathViewController.swift */,
 				A81C566B28192AE80030DCF8 /* ThoughtsViewController.swift */,
+				A8176354281B7694003A416A /* Singleton.swift */,
 			);
 			path = Mindfulness;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				A89576E02818D82D00490424 /* JournalViewController.swift in Sources */,
 				A89576DC2818D5AD00490424 /* InputViewController.swift in Sources */,
 				A8F5634F281AC86D000EBD9F /* Mindfulness+CoreDataClass.swift in Sources */,
+				A8176355281B7694003A416A /* Singleton.swift in Sources */,
 				A81C566A281923FA0030DCF8 /* BreathViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -37,17 +37,17 @@ class MindfulnessViewController: UIViewController {
     
     @IBAction func startPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToDeepBreath", sender: self)
-        playSound(soundName: "ClaireDeLune")
+        Singleton.sharedInstance.playSound()
     }
     
     //MARK: - Play Sound Functio
     
-    func playSound(soundName: String) {
-        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
-        player = try! AVAudioPlayer(contentsOf: url!)
-        player?.play()
-                
-    }
+//    func playSound(soundName: String) {
+//        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
+//        player = try! AVAudioPlayer(contentsOf: url!)
+//        player?.play()
+//
+//    }
     
 //    func fetchMindfulnessCount() {
 //        do {

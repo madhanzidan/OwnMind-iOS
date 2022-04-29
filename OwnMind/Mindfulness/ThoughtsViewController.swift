@@ -38,7 +38,7 @@ class ThoughtsViewController: UIViewController {
         player?.stop()
         let plusCount = Mindfulness(context: self.context)
         plusCount.sessionsDone += 1
-        stopSound(soundName: "ClaireDeLune")
+        Singleton.sharedInstance.stopSound()
         
         //Save the data
         do {
@@ -59,12 +59,12 @@ class ThoughtsViewController: UIViewController {
         }
     }
     
-    func stopSound(soundName: String) {
-        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
-        player = try! AVAudioPlayer(contentsOf: url!)
-        player?.stop()
-                
-    }
+//    func stopSound(soundName: String) {
+//        let url = Bundle.main.url(forResource: soundName, withExtension: "mp3")
+//        player = try! AVAudioPlayer(contentsOf: url!)
+//        player?.stop()
+//
+//    }
     
     
 }
