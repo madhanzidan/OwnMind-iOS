@@ -12,6 +12,7 @@ class ThoughtsViewController: UIViewController {
     var timer = Timer()
     var totalTime = 60
     var timePassed = 0
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var stepLabel: UILabel!
@@ -24,6 +25,7 @@ class ThoughtsViewController: UIViewController {
         navigationItem.standardAppearance = appearance
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        defaults.set(0, forKey: "counterSession")
         
     }
     
@@ -40,6 +42,8 @@ class ThoughtsViewController: UIViewController {
             self.navigationController!.popToRootViewController(animated: true)
         }
         
+        //Increment countLabel
+        UserDefaults.incrementCounter(key: "counter")
     }
     
     @objc func updateTimer() {
@@ -52,4 +56,15 @@ class ThoughtsViewController: UIViewController {
         }
     }
     
+    
+}
+
+//MARK: - UserDefaults for Counter
+extension UserDefaults {
+    class func incrementCounter(key: String) {
+        let defaults = UserDefaults.standard
+        let val = defaults.integer(forKey: key)
+        defaults.set(val + 1, forKey: key)
+        defaults.synchronize()
+    }
 }

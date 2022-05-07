@@ -10,9 +10,10 @@ import UIKit
 class MindfulnessViewController: UIViewController {
     
     @IBOutlet weak var sessionsDoneView: UIView!
-    @IBOutlet weak var sessionsCountLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
     
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,19 @@ class MindfulnessViewController: UIViewController {
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NotReallyBlack")!]
         navigationItem.standardAppearance = appearance
         
+        //Update countLabel
+        countLabel.text = String(defaults.integer(forKey: "counter"))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Update countLabel
+        countLabel.text = String(defaults.integer(forKey: "counter"))
     }
     
     @IBAction func startPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToDeepBreath", sender: self)
         Singleton.sharedInstance.playSound()
+        
     }
     
     
