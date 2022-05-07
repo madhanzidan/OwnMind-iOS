@@ -33,12 +33,14 @@ class DetailViewController: UIViewController {
         setView(view: differentTextView)
         setView(view: newThoughtsTextView)
         
-        happenedTextView.text = items?.happened
-        triggerTextView.text = items?.trigger
-        feelTextView.text = items?.feel
-        thoughtsTextView.text = items?.thoughts
-        differentTextView.text = items?.different
-        newThoughtsTextView.text = items?.newThoughts
+        DispatchQueue.main.async {
+            self.happenedTextView.text = self.items?.happened
+            self.triggerTextView.text = self.items?.trigger
+            self.feelTextView.text = self.items?.feel
+            self.thoughtsTextView.text = self.items?.thoughts
+            self.differentTextView.text = self.items?.different
+            self.newThoughtsTextView.text = self.items?.newThoughts
+        }
         
     }
     
