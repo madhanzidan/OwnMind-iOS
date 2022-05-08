@@ -68,8 +68,7 @@ extension JournalViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK: - Swipe to Delete
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        
-        let action = UIContextualAction(style: .destructive, title: "Remove") { (action, view, completionHandler) in
+        let action = UIContextualAction(style: .normal, title: "Delete") { (action, view, completionHandler) in
             let context = self.appDelegate.persistentContainer.viewContext
             let dataToRemove = self.items![indexPath.row]
             
@@ -87,6 +86,9 @@ extension JournalViewController: UITableViewDelegate, UITableViewDataSource {
             self.fetchJournal()
             
         }
+        action.backgroundColor = UIColor(named: "Salmon")
+        action.image = UIImage(systemName: "trash.fill")
+        
         return UISwipeActionsConfiguration(actions: [action])
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
+class InputViewController: UIViewController, UITextFieldDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var items: [Journal]?
@@ -26,28 +26,63 @@ class InputViewController: UIViewController {
         super.viewDidLoad()
         self.loadDayData(Date())
         self.createDatePicker()
+        self.dateTextField.delegate = self
+        dateTextField.returnKeyType = .done
+        self.happenedTextField.delegate = self
+        happenedTextField.returnKeyType = .done
+        self.triggerTextField.delegate = self
+        triggerTextField.returnKeyType = .done
+        self.emotionTextField.delegate = self
+        emotionTextField.returnKeyType = .done
+        self.thoughtsTextField.delegate = self
+        thoughtsTextField.returnKeyType = .done
+        self.differentTextField.delegate = self
+        differentTextField.returnKeyType = .done
+        self.newThoughtsTextField.delegate = self
+        newThoughtsTextField.returnKeyType = .done
     }
     
+    //Dissmiss the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     @IBAction func addPressed(_ sender: UIButton) {
-        self.dismiss(animated: true)
         
-        let newJournal = Journal(context: self.context)
-        newJournal.date = dateTextField.text
-        newJournal.happened = happenedTextField.text
-        newJournal.trigger = triggerTextField.text
-        newJournal.feel = emotionTextField.text
-        newJournal.thoughts = thoughtsTextField.text
-        newJournal.different = differentTextField.text
-        newJournal.newThoughts = newThoughtsTextField.text
-        
-        //Save the data
-        do {
-            try self.context.save()
-        } catch {
-            print(error)
+        if happenedTextField.text == "" {
+            showAlert(title: "Need to Fill", body: "At least you should fill about 'What happened?' on that day")
+        } else {
+            self.dismiss(animated: true)
+            
+            let newJournal = Journal(context: self.context)
+            newJournal.date = dateTextField.text
+            newJournal.happened = happenedTextField.text
+            newJournal.trigger = triggerTextField.text
+            newJournal.feel = emotionTextField.text
+            newJournal.thoughts = thoughtsTextField.text
+            newJournal.different = differentTextField.text
+            newJournal.newThoughts = newThoughtsTextField.text
+            
+            //Save the data
+            do {
+                try self.context.save()
+            } catch {
+                print(error)
+            }
         }
+        
+        
 
+    }
+    
+    func showAlert(title: String, body: String) {
+        let alert = UIAlertController(title: title, message: body, preferredStyle: .alert)
+        let alertAction = UIAlertAction.init(title: "OK", style: .default) { action in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(alertAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func createDatePicker() {
