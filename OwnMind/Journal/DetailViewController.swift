@@ -40,6 +40,7 @@ class DetailViewController: UIViewController {
             self.thoughtsTextView.text = self.items?.thoughts
             self.differentTextView.text = self.items?.different
             self.newThoughtsTextView.text = self.items?.newThoughts
+            
         }
         
     }
