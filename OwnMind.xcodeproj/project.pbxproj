@@ -77,6 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A807EE1628296E31001E48C7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A89576E62818F32200490424 /* TabBar */,
+				A89576E52818F2AE00490424 /* Mindfulness */,
+				A89576E42818F2A000490424 /* Journal */,
+				A89576E32818F28900490424 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		A81C566F281936A50030DCF8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,10 +179,7 @@
 		A8F0B67B281702B500E7B85D /* OwnMind */ = {
 			isa = PBXGroup;
 			children = (
-				A89576E62818F32200490424 /* TabBar */,
-				A89576E52818F2AE00490424 /* Mindfulness */,
-				A89576E42818F2A000490424 /* Journal */,
-				A89576E32818F28900490424 /* Home */,
+				A807EE1628296E31001E48C7 /* Scenes */,
 				A89576CE2818645B00490424 /* Assets */,
 				A8F0B682281702B500E7B85D /* Main.storyboard */,
 				A8F0B687281702B700E7B85D /* LaunchScreen.storyboard */,

@@ -17,8 +17,9 @@ class PositionViewController: UIViewController {
     var timePassed = 0
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
+        
         title = "Position"
         let appearance = UINavigationBarAppearance()
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NotReallyWhite")!]

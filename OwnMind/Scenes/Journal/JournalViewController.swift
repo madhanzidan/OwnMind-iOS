@@ -18,6 +18,7 @@ class JournalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         
         //Set navigation appearance
         title = "Journal"

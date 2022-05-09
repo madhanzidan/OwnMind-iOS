@@ -24,6 +24,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
+        
         self.loadDayData(Date())
         self.createDatePicker()
         self.dateTextField.delegate = self

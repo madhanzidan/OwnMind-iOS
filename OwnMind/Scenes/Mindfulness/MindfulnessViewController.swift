@@ -17,6 +17,7 @@ class MindfulnessViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         setView(view: sessionsDoneView)
         
         //Set navigation appearance
@@ -36,6 +37,8 @@ class MindfulnessViewController: UIViewController {
     
     @IBAction func startPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToDeepBreath", sender: self)
+        
+        //Singleton to play sound
         Singleton.sharedInstance.playSound()
         
     }

@@ -19,18 +19,22 @@ class ThoughtsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
+        
         title = "Thoughts"
         let appearance = UINavigationBarAppearance()
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NotReallyWhite")!]
         navigationItem.standardAppearance = appearance
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        
+        //Set default value for counter session count
         defaults.set(0, forKey: "counterSession")
         
     }
     
     @IBAction func finishPressed(_ sender: UIButton) {
-        
+        //Singleton to stop sound
         Singleton.sharedInstance.stopSound()
         
         //Pop to root navigation controller

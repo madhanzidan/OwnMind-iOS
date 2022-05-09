@@ -13,9 +13,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        overrideUserInterfaceStyle = .light
         setView(view: startView)
-        
     }
     
     @IBAction func startPressed(_ sender: UIButton) {
