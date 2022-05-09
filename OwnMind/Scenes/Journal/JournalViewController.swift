@@ -29,7 +29,9 @@ class JournalViewController: UIViewController {
         //Set tableView
         tableView.delegate = self
         tableView.dataSource = self
+        
         fetchJournal() //Retrieve from CoreData
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +44,7 @@ class JournalViewController: UIViewController {
             let fetchRequest = Journal.fetchRequest() //Select *
             let data = try context.fetch(fetchRequest)
             items = data
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -75,6 +78,7 @@ extension JournalViewController: UITableViewDelegate, UITableViewDataSource {
             
             //Remove Journal array data selected from CoreData
             context.delete(dataToRemove)
+            
             
             //Save new data
             do {
